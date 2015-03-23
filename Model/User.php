@@ -1,17 +1,8 @@
 <?php
-App::uses('CakeAdminAppModel', 'CakeAdmin.Model');
-/**
- * User Model
- *
- * @property Group $Group
- */
-class User extends CakeAdminAppModel {
+App::uses('AdminAppModel', 'Admin.Model');
 
-/**
- * Validation rules
- *
- * @var array
- */
+class User extends AdminAppModel {
+
 	public $validate = array(
 		'username' => array(
 			'notEmpty' => array(
@@ -23,7 +14,27 @@ class User extends CakeAdminAppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'password' => array(
+		'first_name' => array(
+			'notEmpty' => array(
+				'rule' => array('notEmpty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'middle_name' => array(
+			'notEmpty' => array(
+				'rule' => array('notEmpty'),
+				//'message' => 'Your custom message here',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+		'last_name' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
@@ -43,17 +54,7 @@ class User extends CakeAdminAppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'first_name' => array(
-			'notEmpty' => array(
-				'rule' => array('notEmpty'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
-		'last_name' => array(
+		'password' => array(
 			'notEmpty' => array(
 				'rule' => array('notEmpty'),
 				//'message' => 'Your custom message here',
@@ -75,13 +76,7 @@ class User extends CakeAdminAppModel {
 		),
 	);
 
-	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
-/**
- * belongsTo associations
- *
- * @var array
- */
 	public $belongsTo = array(
 		'Group' => array(
 			'className' => 'Group',

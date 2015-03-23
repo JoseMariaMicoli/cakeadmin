@@ -1,5 +1,5 @@
 <?php
-App::uses('Group', 'CakeAdmin.Model');
+App::uses('Group', 'Admin.Model');
 
 /**
  * Group Test Case
@@ -13,8 +13,8 @@ class GroupTest extends CakeTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'plugin.cake_admin.group',
-		'plugin.cake_admin.user'
+		'plugin.admin.group',
+		'plugin.admin.user'
 	);
 
 /**
@@ -24,7 +24,7 @@ class GroupTest extends CakeTestCase {
  */
 	public function setUp() {
 		parent::setUp();
-		$this->Group = ClassRegistry::init('CakeAdmin.Group');
+		$this->Group = ClassRegistry::init('Admin.Group');
 	}
 
 /**

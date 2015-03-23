@@ -1,11 +1,11 @@
 <?php
-App::uses('CakeAdminAppModel', 'CakeAdmin.Model');
+App::uses('AdminAppModel', 'Admin.Model');
 /**
  * Group Model
  *
  * @property User $User
  */
-class Group extends CakeAdminAppModel {
+class Group extends AdminAppModel {
 
 /**
  * Validation rules

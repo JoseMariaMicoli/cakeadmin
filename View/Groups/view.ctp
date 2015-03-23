@@ -41,13 +41,9 @@
 	<tr>
 		<th><?php echo __('Id'); ?></th>
 		<th><?php echo __('Username'); ?></th>
-		<th><?php echo __('Password'); ?></th>
 		<th><?php echo __('Email'); ?></th>
-		<th><?php echo __('First Name'); ?></th>
-		<th><?php echo __('Middle Name'); ?></th>
-		<th><?php echo __('Last Name'); ?></th>
+		<th><?php echo __('Password'); ?></th>
 		<th><?php echo __('Group Id'); ?></th>
-		<th><?php echo __('Is Active'); ?></th>
 		<th><?php echo __('Created'); ?></th>
 		<th><?php echo __('Modified'); ?></th>
 		<th class="actions"><?php echo __('Actions'); ?></th>
@@ -56,13 +52,9 @@
 		<tr>
 			<td><?php echo $user['id']; ?></td>
 			<td><?php echo $user['username']; ?></td>
-			<td><?php echo $user['password']; ?></td>
 			<td><?php echo $user['email']; ?></td>
-			<td><?php echo $user['first_name']; ?></td>
-			<td><?php echo $user['middle_name']; ?></td>
-			<td><?php echo $user['last_name']; ?></td>
+			<td><?php echo $user['password']; ?></td>
 			<td><?php echo $user['group_id']; ?></td>
-			<td><?php echo $user['is_active']; ?></td>
 			<td><?php echo $user['created']; ?></td>
 			<td><?php echo $user['modified']; ?></td>
 			<td class="actions">
