@@ -27,5 +27,7 @@ class AdminAppController extends AppController {
           'controller' => 'users',
           'action' => 'index'
         );
+
+        $this->Auth->allow('display');
     }
 }

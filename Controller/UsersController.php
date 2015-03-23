@@ -74,6 +74,7 @@ class UsersController extends AdminAppController {
 	{
     	if ($this->request->is('post')) {
         	if ($this->Auth->login()) {
+        		$this->Session->setFlash(__('Your are logged in.'));
             	return $this->redirect($this->Auth->redirectUrl());
         	}
         	$this->Session->setFlash(__('Your username or password was incorrect.'));
@@ -91,6 +92,6 @@ class UsersController extends AdminAppController {
     	parent::beforeFilter();
 
     	// For CakePHP 2.1 and up
-    	$this->Auth->allow('index', 'view', 'login', 'add');
+    	$this->Auth->allow('add', 'view');
 	}
 }
