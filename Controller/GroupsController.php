@@ -51,7 +51,7 @@ class GroupsController extends AdminAppController {
 				$this->Session->setFlash(__('The group could not be saved. Please, try again.'));
 			}
 		} else {
-			$options = array('conditions' => array('Group.' . $this->User->primaryKey => $id));
+			$options = array('conditions' => array('Group.' . $this->Group->primaryKey => $id));
 			$this->request->data = $this->Group->find('first', $options);
 		}
 		$groups = $this->Group->User->find('list');
@@ -78,6 +78,6 @@ class GroupsController extends AdminAppController {
     	parent::beforeFilter();
 
     	// For CakePHP 2.1 and up
-    	$this->Auth->allow('index', 'view', 'login');
+    	//$this->Auth->allow('index', 'view', 'login');
 	}
 }
