@@ -3,7 +3,7 @@ App::uses('AdminAppController', 'Admin.Controller');
 
 class UsersController extends AdminAppController {
 
-	public $components = array('Paginator', 'Session');
+	public $components = array('Paginator', 'Session', 'Auth', 'Acl');
 
 	public function view($id = null)
 	{
@@ -91,6 +91,6 @@ class UsersController extends AdminAppController {
     	parent::beforeFilter();
 
     	// For CakePHP 2.1 and up
-    	$this->Auth->allow('index', 'view', 'login');
+    	$this->Auth->allow('index', 'view', 'login', 'add');
 	}
 }

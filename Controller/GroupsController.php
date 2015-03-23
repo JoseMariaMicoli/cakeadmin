@@ -6,7 +6,7 @@ App::uses('AdminAppController', 'Admin.Controller');
  */
 class GroupsController extends AdminAppController {
 
-	public $components = array('Paginator', 'Session');
+	public $components = array('Paginator', 'Session', 'Auth', 'Acl');
 
 	public function view($id = null)
 	{
